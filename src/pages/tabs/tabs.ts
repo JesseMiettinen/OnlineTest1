@@ -1,19 +1,27 @@
+//Jesse Miettinen 1601555
+
 import { Component } from '@angular/core';
-
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
-
+import { IonicPage,  NavParams } from 'ionic-angular';
+ 
+@IonicPage()
 @Component({
-  templateUrl: 'tabs.html'
+  selector: 'page-tabs',
+  templateUrl: 'tabs.html',
 })
 export class TabsPage {
-
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
-
-  constructor() {
-
+ 
+  tab1Root: any = 'AboutPage';
+  tab2Root: any = 'TargetedCvPage';
+  tab3Root: any = 'ProjectWorkPage';
+  tab4Root: any = 'ExtraCurriculumPage';
+  tab5Root: any = 'ContactPage';
+  myIndex: number;
+ 
+  constructor(navParams: NavParams) {
+    
+    this.myIndex = navParams.data.tabIndex || 0;
   }
 }
+
+
+

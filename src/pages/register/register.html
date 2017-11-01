@@ -1,0 +1,33 @@
+<!-- Jesse Miettinen 1601555 -->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<b>Please use a valid e-mail address and a password with length of at least six characters for succesful registration.</b>
+
+  <ion-item>
+    <ion-label floating>Email Address</ion-label>
+  
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    
+  </ion-item>
+
+
+
+<ion-item>
+  <ion-label floating>Password</ion-label>
+
+  <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  
+</ion-item>
+
+<button color="secondary" ion-button (click)="register(user)"> Register</button>
+
+
+</ion-content>
